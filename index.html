@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lanesbrew coffee house 4.9☕</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    window.onerror = function(msg, url, line) {
+      alert('JS Error: ' + msg + ' (line ' + line + ')');
+    };
+  </script>
+</head>
+<body>
+
+  <h2 class="wall-title">lanesbrew
+    <br>coffee & community</h2>
+
+  <main class="wall" id="photo-wall">
+    <!-- Coffee moments appear here -->
+  </main>
+
+  <div id="preview-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>your coffee moment☕</h3>
+      <div class="preview-polaroid">
+        <div class="image-container">
+          <img id="preview-img" src="" alt="Preview" />
+        </div>
+        <input type="text" id="modal-caption-input" maxlength="10" placeholder="...">
+      </div>
+      <div class="modal-buttons">
+        <button id="retake-btn" class="secondary-btn">oops<br>Retake</button>
+        <button id="confirm-upload-btn" class="primary-btn">Pin to Wall</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-bar">
+    <input type="file" id="camera-input" accept="image/*" capture="environment" style="display: none;">
+    <label for="camera-input" class="snap-btn-large" id="open-camera-btn">pin your moment📌</label>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
